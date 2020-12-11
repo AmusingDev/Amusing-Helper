@@ -17,7 +17,7 @@ module.exports.run = async (client, msg, args) => {
 
 	const errorEmbed = new MessageEmbed()
 
-		.setColor(botconfig.errorColor)
+		.setColor(botconfig.errorcolor)
 		.setTitle('Error!')
 		.setDescription("I am not able to DM you, please check if '**Allow direct messages from server members**' is enabled or if you've blocked the bot")
 
