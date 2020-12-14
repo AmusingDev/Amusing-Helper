@@ -2,9 +2,9 @@
 
 const { Client, MessageEmbed } = require('discord.js');
 const { ShardingManager } = require('discord.js');
-const botconfig = require('./botconfig.json');
+const config = require('./config.json');
 const Discord = require('discord.js');
-const prefix = botconfig.prefix;
+const prefix = config.prefix;
 const fs = require('fs');
 
 const client = new Discord.Client();
@@ -16,11 +16,11 @@ const status_options = ['!help`, "Open-source Project"];
 
 	fs.readdir('./commands/', (err, files) => {
 
-		if (err) console.log(err);
+		if (err) console.log(err); // Logs encountered errors
 
 		let file = files.filter(f => f.split('.').pop() === 'js')
 		if (file.length <= 0) {
-			console.log("Couldn't find commands.");
+			console.log("Couldn't find commands."); // Returns this if no .js files were found in the folder specified
 			return;
 		}
 
@@ -50,7 +50,7 @@ client.on('debug', console.log)
 
 client.on('ready', () => {
 
-	console.log(`\nThe bot is online in ${client.guilds.cache.size} servers!`);
+	console.log(`\nThe bot is online in ${client.guilds.cache.size} servers!`); // Returns this when the bot is set up and ready to be used
 
 	setInterval(() => {
 		const index = Math.floor(Math.random() * (activity_list.length));
@@ -63,7 +63,7 @@ client.on('ready', () => {
 
 client.on('message', async msg => {
 
-	if (msg.author.bot) return;
+	if (msg.author.bot) return; // Won't trigger commands if they were used by a bot
 
 	let messageArray = msg.content.toLowerCase().split(' ');
 	let cmd = messageArray[0];
@@ -76,4 +76,4 @@ client.on('message', async msg => {
 
 // ---------------------------------------- CLIENT LOGIN ---------------------------------------- //
 
-client.login("TOKEN"); // Replace "TOKEN" with your bot's token
+client.login("TOKEN"); // Replace "TOKEN" with your bot's token (logs the bot in)
