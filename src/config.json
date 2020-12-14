@@ -1,0 +1,5 @@
+{
+  "prefix": "!", // The bot's prefix
+  "embedcolor": "0x000000", // Embed color (0xHexColor)
+  "errorcolor": "0xff0000",
+}
