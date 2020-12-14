@@ -24,6 +24,6 @@ module.exports.run = async (client, msg, args) => {
 }
 
 module.exports.command = {
-	name: "help", // What the user has to say to trigger the command
+    name: "help", // What the user has to say to trigger the command
     aliases: [] // Command alternatives
 }
