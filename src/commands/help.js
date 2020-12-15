@@ -20,7 +20,7 @@ module.exports.run = async (client, msg, args) => {
 		.setTitle('Error!') // Large title text
 		.setDescription("I am not able to DM you, please check if '**Allow direct messages from server members**' is enabled or if you've blocked the bot")
 
-	msg.author.send(help).catch(() => msg.channel.send(errembed)); // Sends the embed to the author's DMs. If the author's DMs are closed, the bot will send the error 																		  embed in the chat
+	msg.author.send(help).catch(() => msg.channel.send(errembed)); // Sends the embed to the author's DMs. If the author's DMs are closed, the bot will send the error embed in the chat
 }
 
 module.exports.command = {
