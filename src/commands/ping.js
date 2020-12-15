@@ -3,10 +3,10 @@ const Discord = require('discord.js');
 module.exports.run = async (client, msg, args) => {
 
     if (args[0]) return; // If there are any arguments the command will not work
-    let latency = Date.now() - msg.createdTimestamp;
-    let api_latency = Math.round(client.ws.ping);
+    let latency = `\`${Date.now() - msg.createdTimestamp}ms\``;
+    let api_latency = `\`${Math.round(client.ws.ping)}ms\``;
     
-    msg.channel.send(`**Latency**: \`${latency}ms\`\n**API Latency**: \`${api_latency}ms\``).catch(msg.channel.send("An error has occured!"));
+    msg.channel.send(`**Latency**: ${latency}\n**API Latency**: ${api_latency}`).catch(console.error);
 
 }
 
