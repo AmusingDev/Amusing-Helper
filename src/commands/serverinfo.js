@@ -5,9 +5,7 @@ module.exports.run = async (client, msg, args) => {
     if (args[0]) return; // If there are any arguments the command will not work
     
     let roles = msg.guild.roles.cache.size <= 35 ? `<@&${msg.guild.roles.cache.map(role => role.id).join('>, <@&')}>` : 'Too many roles...';
-	let latency = `${Date.now() - msg.createdTimestamp}ms`;
-
-	if (ping.startsWith('-')) ping = ping.slice(1);
+    let latency = `${Date.now() - msg.createdTimestamp}ms`;
 
 	const embed = new MessageEmbed()
 
