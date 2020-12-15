@@ -1,7 +1,5 @@
 // ---------------------------------------- PACKAGES ---------------------------------------- //
 
-const { Client, MessageEmbed } = require('discord.js');
-const { ShardingManager } = require('discord.js');
 const config = require('./config.json');
 const Discord = require('discord.js');
 const prefix = config.prefix;
