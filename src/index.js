@@ -8,7 +8,8 @@ const fs = require('fs');
 const client = new Discord.Client();
 client.aliases = new Discord.Collection();
 client.commands = new Discord.Collection();
-const status_options = ['!help`, "Open-source Project"];
+
+const status_options = ["!help", "Open-source Project"]; // Activity status text (picked randomly)
 
 // ---------------------------------------- LOAD COMMANDS ---------------------------------------- //
 
@@ -32,7 +33,7 @@ const status_options = ['!help`, "Open-source Project"];
 				});
 			};
 
-			console.log(`${f} is Working`);
+			console.log(`${f} is Working`); // Logs working commands
 		});
 
 	});
